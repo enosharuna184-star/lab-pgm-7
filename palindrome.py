@@ -1,11 +1,7 @@
-def is_palindrome(text):
-	normalized = "".join(char.casefold() for char in text if char.isalnum())
-	return normalized == normalized[::-1]
+import sys  
+string = sys.argv[1]
 
-
-if __name__ == "__main__":
-	value = input("Enter text: ")
-	if is_palindrome(value):
-		print("It is a palindrome.")
-	else:
-		print("It is not a palindrome.")
+if string == string[::-1]:
+    print(string, "is a palindrome")
+else:
+    print(string, "is not a palindrome")
